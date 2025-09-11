@@ -46,9 +46,7 @@
               <div class="text-sm text-foreground font-medium">
                 {{ user?.email }}
               </div>
-              <div class="text-xs text-gray-400">
-                Usuário logado
-              </div>
+              <div class="text-xs text-gray-400">Usuário logado</div>
             </div>
             <BaseButton
               variant="outline"
@@ -61,9 +59,7 @@
           </div>
           <div v-else>
             <NuxtLink to="/login">
-              <BaseButton variant="primary" size="sm">
-                Entrar
-              </BaseButton>
+              <BaseButton variant="primary" size="sm"> Entrar </BaseButton>
             </NuxtLink>
           </div>
         </div>
@@ -130,7 +126,7 @@
           >
             Relatórios
           </NuxtLink>
-          
+
           <!-- Mobile user menu -->
           <div class="pt-4 border-t border-border">
             <div v-if="isAuthenticated">
@@ -138,9 +134,7 @@
                 <div class="text-sm text-foreground font-medium">
                   {{ user?.email }}
                 </div>
-                <div class="text-xs text-gray-400">
-                  Usuário logado
-                </div>
+                <div class="text-xs text-gray-400">Usuário logado</div>
               </div>
               <BaseButton
                 variant="outline"
@@ -169,7 +163,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import BaseButton from './BaseButton.vue';
+import BaseButton from "./BaseButton.vue";
 
 const mobileMenuOpen = ref(false);
 
@@ -184,12 +178,12 @@ onMounted(async () => {
 // Função para lidar com o logout
 const handleLogout = async () => {
   const result = await logout();
-  
+
   if (result.success) {
     // Redirecionar para página de login após logout
-    await navigateTo('/login');
+    await navigateTo("/login");
   }
-  
+
   // Fechar menu mobile se estiver aberto
   mobileMenuOpen.value = false;
 };

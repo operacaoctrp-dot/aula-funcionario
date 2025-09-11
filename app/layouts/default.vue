@@ -4,8 +4,10 @@
     <Header />
 
     <!-- Main content -->
-    <main class="flex-1">
-      <NuxtPage />
+    <main class="flex-1 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <NuxtPage />
+      </div>
     </main>
 
     <!-- Footer -->
@@ -14,6 +16,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 

@@ -119,8 +119,8 @@ const sizeClass = computed(() => {
 
 // Tipo do input que muda baseado na visibilidade da senha
 const inputType = computed(() => {
-  if (props.type === 'password') {
-    return showPassword.value ? 'text' : 'password';
+  if (props.type === "password") {
+    return showPassword.value ? "text" : "password";
   }
   return props.type ?? "text";
 });
