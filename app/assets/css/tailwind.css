@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cores base e variáveis utilitárias */
+:root {
+  --background: theme(colors.background.DEFAULT);
+  --foreground: theme(colors.background.foreground);
+  --card: theme(colors.card.DEFAULT);
+  --card-foreground: theme(colors.card.foreground);
+  --popover: theme(colors.card.DEFAULT);
+  --popover-foreground: theme(colors.card.foreground);
+  --primary: theme(colors.primary.DEFAULT);
+  --primary-foreground: theme(colors.primary.foreground);
+  --secondary: theme(colors.secondary.DEFAULT);
+  --secondary-foreground: theme(colors.secondary.foreground);
+  --muted: theme(colors.muted.DEFAULT);
+  --muted-foreground: theme(colors.muted.foreground);
+  --accent: theme(colors.accent.DEFAULT);
+  --accent-foreground: theme(colors.accent.foreground);
+  --border: theme(colors.border);
+  --input: theme(colors.input);
+  --ring: theme(colors.ring);
+}
+
+html,
+body,
+#__nuxt {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+}
