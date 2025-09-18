@@ -20,6 +20,7 @@ SUPABASE_KEY=sua_chave_publica_do_supabase
 ```
 
 **Exemplo:**
+
 ```env
 SUPABASE_URL=https://xbbsbuwapgdxkkvcyhrr.supabase.co
 SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
@@ -52,26 +53,28 @@ npm install
 ### 4. Executar o Projeto
 
 Para desenvolvimento:
+
 ```bash
 npm run dev
 ```
 
 Para build de produção:
+
 ```bash
 npm run build
 ```
 
 ## 🏗️ Estrutura da Tabela `funcionarios`
 
-| Campo | Tipo | Descrição | Obrigatório |
-|-------|------|-----------|-------------|
-| `id` | Serial | Identificador único (auto-incremento) | ✅ |
-| `nome` | Text | Nome completo do funcionário | ✅ |
-| `cargo` | Text | Cargo/função do funcionário | ✅ |
-| `endereco` | Text | Endereço residencial | ❌ |
-| `email` | Text | Email (único no sistema) | ❌ |
-| `salario` | Numeric(10,2) | Salário em formato decimal | ❌ |
-| `created_at` | Timestamp | Data/hora de criação do registro | ✅ (automático) |
+| Campo        | Tipo          | Descrição                             | Obrigatório     |
+| ------------ | ------------- | ------------------------------------- | --------------- |
+| `id`         | Serial        | Identificador único (auto-incremento) | ✅              |
+| `nome`       | Text          | Nome completo do funcionário          | ✅              |
+| `cargo`      | Text          | Cargo/função do funcionário           | ✅              |
+| `endereco`   | Text          | Endereço residencial                  | ❌              |
+| `email`      | Text          | Email (único no sistema)              | ❌              |
+| `salario`    | Numeric(10,2) | Salário em formato decimal            | ❌              |
+| `created_at` | Timestamp     | Data/hora de criação do registro      | ✅ (automático) |
 
 ## 🔧 Funcionalidades do Sistema
 
@@ -109,6 +112,7 @@ npm run build
 ## 📞 Suporte
 
 Para dúvidas ou problemas, consulte:
+
 - [Documentação do Nuxt 3](https://nuxt.com/)
 - [Documentação do Supabase](https://supabase.com/docs)
 - [Documentação do Tailwind CSS](https://tailwindcss.com/docs)
