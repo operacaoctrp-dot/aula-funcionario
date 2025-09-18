@@ -2,14 +2,14 @@
   <div>
     <label
       v-if="label"
-      :for="id"
+      :for="elementId"
       class="block text-sm font-medium text-primary-300"
     >
       {{ label }}
     </label>
     <div class="mt-1 relative">
       <input
-        :id="id"
+        :id="elementId"
         :type="inputType"
         :placeholder="placeholder"
         :disabled="disabled"
@@ -97,6 +97,12 @@ const emit = defineEmits<{
 }>();
 
 const attrs = useAttrs();
+
+// Gerar ID único se não fornecido - usar ref para manter consistência
+const generatedId = ref(
+  `input-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`
+);
+const elementId = computed(() => props.id || generatedId.value);
 
 // Estado para controlar visibilidade da senha
 const showPassword = ref(false);

@@ -1,5 +1,10 @@
 <template>
-  <button :type="type" :disabled="disabled || loading" :class="classes">
+  <button
+    :type="type"
+    :disabled="disabled || loading"
+    :class="classes"
+    @click="handleClick"
+  >
     <span v-if="loading" class="mr-2 inline-flex items-center">
       <svg class="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
         <circle
@@ -26,6 +31,10 @@ import { computed } from "vue";
 
 type ButtonVariant = "primary" | "secondary" | "accent" | "ghost" | "outline";
 type ButtonSize = "sm" | "md" | "lg";
+
+const emit = defineEmits<{
+  click: [event: Event];
+}>();
 
 const props = defineProps<{
   variant?: ButtonVariant;
@@ -66,4 +75,10 @@ const classes = computed(() => [
 const type = computed(() => props.type ?? "button");
 const disabled = computed(() => props.disabled ?? false);
 const loading = computed(() => props.loading ?? false);
+
+const handleClick = (event: Event) => {
+  if (!props.disabled && !props.loading) {
+    emit("click", event);
+  }
+};
 </script>

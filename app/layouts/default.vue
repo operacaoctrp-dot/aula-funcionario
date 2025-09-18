@@ -12,13 +12,17 @@
 
     <!-- Footer -->
     <Footer />
+
+    <!-- Toast Container -->
+    <Toaster position="top-right" :rich-colors="true" :close-button="true" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted } from "vue";
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
+import { Toaster } from "vue-sonner";
 
 // Inicializar verificação de autenticação
 const { checkAuth } = useAuth();
